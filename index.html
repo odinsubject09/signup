@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup">
+        <div class="background">
+            <span class="background-text">
+                <img src="odin-lined.png" alt="odin">
+                <span class="font">ODIN</span>
+            </span>
+        </div>
+        <div class="form">
+            <p>
+                Hola guys preping to make great things with good value and money:)
+                <br>
+                you know we gonna need a rover and a home that is basic.
+                <br>
+                so make it happen
+                <br>
+                <em>9timeluck+timeluck</em>
+            </p>
+            <form action="#" method="post">
+                <h3>Let's do this!</h3>
+                <label class="first-name" for="first-name">FIRST NAME</label>
+                <label class="last-name" for="last-name">LAST NAME</label>
+                <br>
+                <input type="text" id="first-name" name="first-name" class="first-name" required >
+                <input type="text" id="last-name" name="last-name" class="last-name" required >
+                <br>
+                <label class="email" for="email">EMAIL </label>
+                <label class="phone-number" for="phone-number">PHONE NUMBER</label>
+                <br>
+                <input type="email" id="email" name="email" class="email" required >
+                <input type="text" id="phone-number" name="phone-number" class="phone-number" required pattern="\+91\d{10}" value="+91 " onfocus="this.setSelectionRange(3, 3);" onkeydown="if(this.value.length <= 4 && (event.key === 'Backspace' || event.key === 'Delete')) event.preventDefault();" title="Phone number must be in the format +91 followed by 10 digits">
+                <br>
+                <label class="password" for="password">PASSWORD </label>
+                <label class="confirm-password" for="confirm-password">CONFIRM PASSWORD</label>
+                <br>
+                <input type="password" id="password" name="password" class="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}" title="Password must be at least 8 characters long and include at least one special character, one letter, and one number.">
+
+                <input type="password" id="confirm-password" name="confirm-password" class="confirm-password" required title="confirm-password">
+                <br>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
