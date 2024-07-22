@@ -36,18 +36,22 @@
                 <label class="phone-number" for="phone-number">PHONE NUMBER</label>
                 <br>
                 <input type="email" id="email" name="email" class="email" required >
-                <input type="text" id="phone-number" name="phone-number" class="phone-number" required pattern="\+91\d{10}" value="+91 " onfocus="this.setSelectionRange(3, 3);" onkeydown="if(this.value.length <= 4 && (event.key === 'Backspace' || event.key === 'Delete')) event.preventDefault();" title="Phone number must be in the format +91 followed by 10 digits">
+                <input type="text" id="phone-number" name="phone-number" class="phone-number" required pattern="\+91 \d{10}" maxlength="14" minlength="14" value="+91 " onfocus="this.setSelectionRange(3, 3);" onkeydown="if(this.value.length <= 4 && (event.key === 'Backspace' || event.key === 'Delete')) event.preventDefault();" title="Phone number must be in the format +91 followed by 10 digits">
                 <br>
                 <label class="password" for="password">PASSWORD </label>
                 <label class="confirm-password" for="confirm-password">CONFIRM PASSWORD</label>
                 <br>
-                <input type="password" id="password" name="password" class="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}" title="Password must be at least 8 characters long and include at least one special character, one letter, and one number.">
+                <input type="password" id="password" name="password" class="password" required maxlength="8" minlength="8" pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{8,}" title="Password must 8 characters long and include at least one special character, one letter, and one number.">
 
                 <input type="password" id="confirm-password" name="confirm-password" class="confirm-password" required title="confirm-password">
                 <br>
+                <div class="last-part">
+                    <button type="submit">Create Account</button>
+                    <strong>Already have a account?<a href="">Log in</a></strong>
+                </div>
             </form>
         </div>
     </div>
-    
+    <script src="logic.js"></script>
 </body>
 </html>
